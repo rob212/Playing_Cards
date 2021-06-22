@@ -13,7 +13,9 @@ export const getDeck = () => {
 }
 
 export const shuffle = (deck) => {
+  // Randomly generate a number between 1 - 1000
   const numberOfShuffles = Math.floor((Math.random() + 1) * 1000)
+  // for each numberOfShuffles swap the positions of 2 cards in the deck
   for (let i = 0; i < numberOfShuffles; i++) {
     const locationOne = Math.floor(Math.random() * deck.length)
     const locationTwo = Math.floor(Math.random() * deck.length)
